@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register orders</title>
+<link href="css/drive.css" type="text/css" rel="stylesheet"/>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/underscore-1.4.2.js"></script>
+<script type="text/javascript" src="js/backbone-0.9.2.js"></script>
+<script type="text/javascript" src="js/backbone.validation-0.6.2.js"></script>
+<script type="text/javascript" src="js/backbone.validation.bootstrap.js"></script>
+<script type="text/javascript" src="js/serialize-object.js"></script>
+<script src="js/validation-callback.js"></script>
+<script src="js/backbone-localstorage.js"></script>
+<script src="js/drive.js"></script>
+
+<script type="text/template" id="order-form-template">
+<div id="order-container">
+	<div id="home"><img src="images/home.png" /></div>
+	<div id="form-container">
+		<form>
+			<div><label for="title">Title</label><div class="user-data">
+			<% if (state === "input") { %>  
+				<input id="title" name="title" maxlength="30" size="30"  value="<%= typeof(title)!== 'undefined' ?  title : '' %>"/> 
+			<% } else { %> 
+				<div class="value"><%= title %></div> 
+			<% } %></div></div>
+			<div class="clear"></div>
+			<div><label for="estimated_time">Estimated time</label><div class="user-data">
+			<% if (state === "input") { %>
+				<input id="estimated_time" name="estimated_time" value="<%= typeof(estimated_time)!== 'undefined' ?  estimated_time : '' %>" />
+			<% } else { %> 
+				<div class="value"><%= estimated_time %></div> 
+			<% } %></div></div>
+			<div class="clear"></div>
+			<div><label for="estimated_dist">Estimated driving distance</label><div class="user-data">
+			<% if (state === "input") { %>
+				<input id="estimated_dist" name="estimated_dist" value="<%= typeof(estimated_dist)!== 'undefined' ?  estimated_dist : '' %>" />
+			<% } else { %> 
+				<div class="value"><%= estimated_dist %></div> 
+			<% } %></div></div>
+			<div class="clear"></div>
+			<div><label for="description">Description</label><div class="user-data">
+			<% if (state === "input") { %>
+				<textarea id="description" name="description" class="user-input" rows="30" placeholder="Optional"><%= typeof(description)!== 'undefined' ?  description : '' %></textarea>
+			<% } else { %> 
+				<div class="value"><%= description %></div> 
+			<% } %></div></div>
+			<div class="clear"></div>
+			<div><button id="submit" type="submit"><%= state === 'input' ?  'Send' : 'Confirm' %></button></div>
+		</form>
+	</div>
+	<div id="calculated-price">
+		<div class="price-column"><label>Price(hour)</label><div id="price_hour"><%= typeof(price_hour)!== 'undefined' ?  price_hour + '$' : '' %></div></div>
+		<div class="price-column"><label>Price(distance)</label><div id="price_dist"><%= typeof(price_dist)!== 'undefined' ?  price_dist + '$' : '' %></div></div>
+		<div class="price-column"><label>Price(total)</label><div id="price_total"><%= typeof(price_total)!== 'undefined' ?  price_total + '$' : '' %></div></div>
+		<div style="clear"></div>
+	</div>
+</div>
+</script>
+
+
+<script type="text-template" id="order-template">
+<div class="order-row"><div><%= title %></div><div></div></div>
+</script>
+
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>

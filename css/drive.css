@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* Appear assignment 1 css Document */
+body {
+	margin: 0;
+	padding: 0;
+}
+/* Main container */
+#container {
+	margin: 0 auto;
+	width: 920px;
+	margin-top: 20px;
+}
+#container li {
+	list-style: none;
+}
+/* Order container */
+#order-container {
+	position: relative;
+	margin: 60px auto;
+	width: 700px;
+	border: 1px solid #4197ee;
+	font-family: "Helvetica Neue", sans-serif, verdana;
+	color: #999;
+	font-size: 14px;
+	background: #fbfbfb;
+	box-shadow: 0px 0px 4px rgba(1, 1, 1, 0.2), inset 0 0 1px white;
+	-moz-box-shadow: 0px 0px 4px rgba(1, 1, 1, 0.2), inset 0 0 1px white;
+	-webkit-box-shadow: 0px 0px 4px rgba(1, 1, 1, 0.2), inset 0 0 1px white;
+}
+#order-container label {
+	float: left;
+	width: 200px;
+	text-align: right;
+	padding-top: 10px;
+	color: #4197ee;
+}
+/* Form container */
+#form-container {
+	padding: 10px;
+}
+#form-container input, #form-container textarea {
+	height: 30px;
+	width: 390px;
+	margin-left: 4px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	color: gray;
+	-webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 1px 0;
+	-moz-box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 1px 0;
+	-ms-box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 1px 0;
+	-o-box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 1px 0;
+	box-shadow: inset rgba(0, 0, 0, 0.2) 0 1px 1px 0;
+}
+#form-container .user-data {
+	margin-bottom: 0.25em;
+}
+#form-container textarea {
+	height: 200px;
+	resize: none;
+}
+#form-container button {
+	background: rgb(122,188,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(122,188,255,1)), color-stop(44%, rgba(96,171,248,1)), color-stop(100%, rgba(64,150,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0 ); /* IE6-9 */
+	border: 1px solid #3e8fe1;
+	width: 100px;
+	height: 30px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	color: white;
+	box-shadow: 0 0 5px #999, inset 0 1px 1px white;
+	-moz-box-shadow: 0 0 5px #999, inset 0 1px 1px white;
+	-webkit-box-shadow: 0 0 3px #ccc, inset 0 1px 1px white;
+	font-size: 12px;
+	cursor: pointer;
+	margin-left: 500px;
+}
+#form-container .input-error {
+	border-color: #900;
+}
+#form-container .input-success {
+	border-color: #063;
+}
+.input-error-feedback {
+	color: #900;
+	padding-left: 190px;
+}
+/* Price section */
+#order-container #calculated-price {
+	background-color: #2668ac;
+	height: 30px;
+	padding-top: 10px;
+	padding-left: 5px;
+	font-size: 14px;
+	color: #2c547c;
+	border-top: 1px solid #4197ee;
+}
+#order-container #price_hour, 
+#order-container #price_dist, 
+#order-container #price_total {
+	color: white;
+	width: 80px;
+	margin-left: 125px;
+	padding: 5px;
+	padding-left: 10px;
+	border-radius: 20px;
+	background: #1b3e61;
+	height: 14px;
+	
+	font-size: 12px;
+}
+#calculated-price #price_hour {
+	margin-left: 125px;
+}
+#calculated-price #price_total {
+	margin-left: 125px;
+}
+#order-container #calculated-price label {
+	padding-top: 0;
+	margin-top: 2px;
+	width: 120px;
+}
+#calculated-price .price-column {
+	float: left;
+	width: 220px;
+}
+.clear {
+	clear: both;
+}
+#form-container .user-data .value {
+	padding: 10px;
+	margin-left: 200px;
+}
+#home {
+	position: absolute;
+	margin: 10px;
+	padding: 5px;
+	padding-top: 3px;
+	width: 12px;
+	height: 12px;
+	box-shadow: 0 0 3px #006;
+	border-radius: 2px;
+	background: #2668ac;
+	cursor: pointer;
+	display: none;
+}
+.order-row {
+	background: #f2f2f2;
+	border: 1px solid #ddd;
+	height: 20px;
+	margin: 2px;
+	padding: 10px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #4197ee;
+}
